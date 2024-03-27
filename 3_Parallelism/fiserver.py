@@ -11,14 +11,14 @@ import os
 # For details visit pyshine.com
 q = queue.Queue(maxsize=10)
 
-filename =  '/home/vladimir/fa-practics/fa-np-practice/1_echo_server/sample.mp4'
+filename =  'sample.mp4'
 
 
 BUFF_SIZE = 65536
 server_socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_RCVBUF,BUFF_SIZE)
 host_name = socket.gethostname()
-host_ip = socket.gethostbyname(host_name)
+host_ip = '127.0.0.1'
 # host_ip = '192.168.1.21'#  socket.gethostbyname(host_name)
 print(host_ip)
 port = 9688
